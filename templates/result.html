@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title> Result Page</title>
+</head>
+<body bgcolor="yellow">
+    <center>
+
+    
+<form  action="{% url 'mail' %}">
+    {% csrf_token %}
+    <h1>The observed transaction is </h1> <br> <br>
+
+        <h2>{{ans}}</h2>
+    
+    <br>
+    <h3>
+        <a href="{% url 'mail' %}">Send transaction details </a>
+    </h3>
+
+</form>  
+</center>
+</body>

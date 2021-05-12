@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>User Details</title>
+    <style>  
+        body{  
+          font-family: Calibri, Helvetica, sans-serif;  
+          background-color: pink;  
+        } 
+        </style>  
+        
+    </head>
+    <body>
+        <br>
+        <br>
+        <center> <h1> User Details </h1></center>
+        <br>
+        <br>
+
+        <form action="{% url 'ann' %}">
+        {% csrf_token %}
+        <center>
+        Enter the name : <input type="text" name="username"><br>
+        Enter the account number: <input type="number" name="num"><br>
+        Enter phone number : <input type="number" name="phone"><br>
+        Enter email id : <input type="text" name="mailid"><br>
+        <br> <br>
+        <input type="submit" name="submit">
+        </center>
+        </form>
+        </body>
+        </html>
+
